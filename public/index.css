@@ -1,3 +1,14 @@
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: 	#e3c4b5;
+}
+
+#new-task-form {
+  margin-top: 20%;
+}
+
 #list {
   list-style: none;
   padding: 0;

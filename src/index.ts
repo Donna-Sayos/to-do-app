@@ -36,10 +36,11 @@ function addListItem (task : Task) {
   const checkbox = document.createElement("input")
   checkbox.addEventListener("change", () => {
     task.completed = checkbox.checked
+    label.style.textDecoration = checkbox.checked ? 'line-through' : 'none'
     saveTasks()
   })
   checkbox.type = "checkbox"
-  checkbox.checked = task.completed
+  checkbox.checked = task.completed 
   label.append(checkbox, task.title)
   item.append(label)
   list?.append(item)
