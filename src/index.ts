@@ -14,7 +14,7 @@ const tasks: Task[] = loadTasks()
 tasks.forEach(addListItem)
 
 form?.addEventListener("submit", e => {
-  e.preventDefault();
+  e.preventDefault()
 
   if (input?.value == "" || input?.value == null) return; //to make sure input is not null;
 
@@ -46,13 +46,13 @@ function addListItem (task : Task) {
   list?.append(item)
 };
 
-function saveTasks () {
+function saveTasks() {
   localStorage.setItem("TASKS", JSON.stringify(tasks))
 };
 
-function loadTasks (): Task[] {
-  const taskJSON = localStorage.getItem("TASKS");
-  if (taskJSON == null) return [];
+function loadTasks(): Task[] {
+  const taskJSON = localStorage.getItem("TASKS")
+  if (taskJSON == null) return []
 
-  return JSON.parse(taskJSON);
-}
+  return JSON.parse(taskJSON)
+};

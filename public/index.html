@@ -11,6 +11,11 @@
     <form id="new-task-form">
       <input type="text" id="new-task-title">
       <button type="submit" >Add</button>
+      <button onclick=" 
+        localStorage.clear()
+        location.reload()
+        " 
+        >Clear</button>
     </form>
     <ul id="list"></ul>
   </body>
